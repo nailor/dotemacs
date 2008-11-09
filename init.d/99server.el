@@ -1,4 +1,5 @@
 (server-start)
+(add-hook 'after-init-hook 'server-start)
 (add-hook 'server-switch-hook
 	  (lambda nil
 	    (let ((server-buf (current-buffer)))

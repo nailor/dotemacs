@@ -1,3 +1,4 @@
+(setq backup-directory-alist '(("." . "~/.emacs-backups"))) ; stop leaving backup~ turds scattered everywhere
 (global-unset-key (kbd "<up>"))
 (global-unset-key (kbd "<down>"))
 (global-unset-key (kbd "<next>"))
@@ -19,6 +20,10 @@
 (global-set-key (kbd "C-M-p") #'(lambda () (interactive) (previous-line 10)))
 (global-set-key (kbd "C-M-n") #'(lambda () (interactive) (forward-line 10)))
 (global-set-key (kbd "C-c c") 'comment-dwim)
+(mouse-avoidance-mode 'cat-and-mouse)
+(global-set-key (kbd "M--") 'dabbrev-expand)
+(setq inhibit-startup-message t)
+(setq-default show-trailing-whitespace t)
 (if window-system
   ;; Window system present
   (progn
