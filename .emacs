@@ -25,12 +25,16 @@
  '(grep-command "grep -n -r ")
  '(indent-tabs-mode nil)
  '(javascript-indent-level 2)
+ '(js2-basic-offset 4)
  '(js2-mirror-mode nil)
  '(py-python-command "python")
+ '(python-check-command "pylint")
  '(rst-mode-lazy nil)
+ '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(server-mode nil)
  '(show-paren-mode t nil (paren))
+ '(show-trailing-whitespace t)
  '(smerge-command-prefix "+")
  '(transient-mark-mode t)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
@@ -40,6 +44,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "#eeeeee"))))
  '(git-header-face ((t (:foreground "lightblue"))))
  '(git-status-face ((t (:foreground "purple")))))
 (require 'git)

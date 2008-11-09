@@ -12,7 +12,13 @@
 (global-unset-key (kbd "C-<down>"))
 (global-unset-key (kbd "C-<left>"))
 (global-unset-key (kbd "C-<right>"))
-
+(setq show-trailing-whitespace t)
+(global-set-key "\C-cw" 'delete-trailing-whitespace)
+(global-set-key (kbd "M-;") 'beginning-of-buffer)
+(global-set-key (kbd "M-:") 'end-of-buffer)
+(global-set-key (kbd "C-M-p") #'(lambda () (interactive) (previous-line 10)))
+(global-set-key (kbd "C-M-n") #'(lambda () (interactive) (forward-line 10)))
+(global-set-key (kbd "C-c c") 'comment-dwim)
 (if window-system
   ;; Window system present
   (progn
