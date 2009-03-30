@@ -25,8 +25,12 @@
 (mouse-avoidance-mode 'jump)
 (global-set-key (kbd "M--") 'dabbrev-expand)
 (setq inhibit-startup-message t)
-(setq-default show-trailing-whitespace t)
-(add-hook 'python-mode-hook
+;; Put autosave files (ie #foo#) in one place, *not*
+;; scattered all over the file system!
+(defvar autosave-dir
+ (concat "/tmp/emacs_autosaves/" (user-login-name) "/"))
+
+(make-directory autosave-dir t)(add-hook 'python-mode-hook
   #'(lambda ()
       (define-key python-mode-map "\C-m" 'newline-and-indent)
       (define-key python-mode-map (kbd "C-c C-;") 'python-shift-left)
@@ -34,7 +38,7 @@
 
 (if window-system
   ;; Window system present
-  (prognf
+  (progn
     (set-face-attribute 'default nil
                         :background "black"
                         :foreground "white")
@@ -59,4 +63,4 @@
                         :background "white"
                         :foreground "black"
                         :inverse-video nil
-                        :box nil)))
+                        :box nil))))
