@@ -1,5 +1,4 @@
 (require 'cl) ; a rare necessary use of REQUIRE
-(defvar *emacs-load-start* (current-time))
 (setq load-path (cons "/usr/share/emacs/site-lisp/" load-path))
 (setq load-path (cons "~/.emacs-lib" load-path))
 (setq tab-width 4)
@@ -38,7 +37,7 @@
  '(show-paren-mode t nil (paren))
  '(show-trailing-whitespace t)
  '(smerge-command-prefix "+")
- '(transient-mark-mode t)
+ '(transient-mark-mode f)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 
 (custom-set-faces
@@ -61,6 +60,3 @@
 (setq inhibit-splash-screen t)
 (toggle-scroll-bar -1)
 (menu-bar-mode -1)
-
-(message "My .emacs loaded in %ds" (destructuring-bind (hi lo ms) (current-time)
-                           (- (+ hi lo) (+ (first *emacs-load-start*) (second *emacs-load-start*)))))

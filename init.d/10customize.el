@@ -64,3 +64,18 @@
                         :foreground "black"
                         :inverse-video nil
                         :box nil))))
+
+;; Hilight TODO/FIXME/BUG
+(add-hook 'c-mode-common-hook
+               (lambda ()
+                (font-lock-add-keywords nil
+                 '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
+(add-hook 'python-mode-hook
+               (lambda ()
+                (font-lock-add-keywords nil
+                 '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
+
+;; Resize the frame to 80x65 characters
+(add-hook 'after-init-hook
+          #'(lambda ()
+              (modify-frame-parameters nil '((width . 95) (height . 65)))))
