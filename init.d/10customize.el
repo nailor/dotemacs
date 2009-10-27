@@ -73,8 +73,3 @@
                (lambda ()
                 (font-lock-add-keywords nil
                  '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
-
-;; Resize the frame to 80x65 characters
-(add-hook 'after-init-hook
-          #'(lambda ()
-              (modify-frame-parameters nil '((width . 95) (height . 65)))))
