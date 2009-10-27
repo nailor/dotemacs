@@ -1,1 +1,0 @@
-/usr/share/doc/git-core/contrib/emacs/vc-git.el

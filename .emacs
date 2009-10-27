@@ -37,7 +37,7 @@
  '(show-paren-mode t nil (paren))
  '(show-trailing-whitespace t)
  '(smerge-command-prefix "+")
- '(transient-mark-mode f)
+ '(transient-mark-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 
 (custom-set-faces
