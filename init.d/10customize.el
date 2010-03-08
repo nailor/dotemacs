@@ -51,7 +51,7 @@
                         :box nil)
 
     ;; Resize the frame to 80x65 characters
-    ;; (modify-frame-parameters nil '((width . 80) (height . 65))))
+    (modify-frame-parameters nil '((width . 80) (height . 65)))
 
   ;; Running in console
   (progn
