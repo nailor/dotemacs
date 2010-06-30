@@ -5,4 +5,6 @@
 ;; C-style indentations
 (setq cssm-indent-function #'cssm-c-style-indenter)
 (setq cssm-newline-before-closing-bracket t)
-(define-key css-mode-map (kbd "RET") 'newline-and-indent)
+(add-hook 'css-mode-hook
+	  (lambda ()
+            (define-key css-mode-map (kbd "RET") 'newline-and-indent)))
