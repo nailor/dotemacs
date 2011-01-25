@@ -1,11 +1,11 @@
 (require 'ido)
 (setq ido-confirm-unique-completion t)
 (setq ido-default-buffer-method 'samewindow)
-(setq ido-use-filename-at-point t)
+(setq ido-use-filename-at-point nil)
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-flex-matching t) ; fuzzy matching is a must have
 (set-face-background 'ido-first-match "black")
 (set-face-foreground 'ido-subdir "dodger blue")
-
+(setq ido-show-dot-for-dired nil)
 (icomplete-mode 1)
