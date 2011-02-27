@@ -24,13 +24,11 @@
  '(find-grep-options "-q")
  '(global-font-lock-mode t nil (font-lock))
  '(grep-command "grep -n -r ")
+ '(gud-gdb-command-name "gdb --annotate=1")
  '(indent-tabs-mode nil)
- '(javascript-indent-level 2)
  '(js2-basic-offset 4)
  '(js2-mirror-mode nil)
- '(py-python-command "python")
- '(python-check-command "pylint")
- '(python-mode-hook (quote (yas/minor-mode-auto-on (lambda nil (define-key python-mode-map "" (quote newline-and-indent)) (setq c-toggle-auto-hungry-state 1)) (lambda nil (font-lock-add-keywords nil (quote (("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t))))) (lambda nil (define-key python-mode-map "" (quote newline-and-indent)) (define-key python-mode-map (kbd "C-c C-;") (quote python-shift-left)) (define-key python-mode-map (kbd "C-c C-:") (quote python-shift-right))))))
+ '(large-file-warning-threshold nil)
  '(rst-mode-lazy nil)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
@@ -39,7 +37,8 @@
  '(show-trailing-whitespace t)
  '(smerge-command-prefix "+")
  '(transient-mark-mode nil)
- '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
+ '(visible-bell t))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
