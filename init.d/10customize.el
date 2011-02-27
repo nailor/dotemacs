@@ -29,12 +29,7 @@
 (defvar autosave-dir
  (concat "/tmp/emacs_autosaves/" (user-login-name) "/"))
 
-(make-directory autosave-dir t)(add-hook 'python-mode-hook
-  #'(lambda ()
-      (define-key python-mode-map "\C-m" 'newline-and-indent)
-      (define-key python-mode-map (kbd "C-c C-;") 'python-shift-left)
-      (define-key python-mode-map (kbd "C-c C-:") 'python-shift-right)))
-
+(make-directory autosave-dir t)
 (if window-system
   ;; Window system present
   (progn
@@ -63,13 +58,3 @@
                         :foreground "black"
                         :inverse-video nil
                         :box nil))))
-
-;; Hilight TODO/FIXME/BUG
-(add-hook 'c-mode-common-hook
-               (lambda ()
-                (font-lock-add-keywords nil
-                 '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
-(add-hook 'python-mode-hook
-               (lambda ()
-                (font-lock-add-keywords nil
-                 '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
