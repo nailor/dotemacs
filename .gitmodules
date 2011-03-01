@@ -7,3 +7,6 @@
 [submodule "cucumber.el"]
 	path = cucumber.el
 	url = https://github.com/michaelklishin/cucumber.el
+[submodule "git-commit-mode"]
+	path = git-commit-mode
+	url = https://github.com/rafl/git-commit-mode.git
