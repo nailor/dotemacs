@@ -1,1 +1,1 @@
-(setq user-mail-address "jyrki.pulliainen@inoi.fi")
+(setq user-mail-address "jyrki@dywypi.org")
