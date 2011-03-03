@@ -1,6 +1,6 @@
 [submodule "python-mode"]
 	path = python-mode
-	url = git://github.com/fgallina/python.el
+	url = https://github.com/fgallina/python.el.git
 [submodule "gist"]
 	path = gist
 	url = git://github.com/defunkt/gist.el
