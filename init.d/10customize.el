@@ -29,6 +29,17 @@
 (defvar autosave-dir
  (concat "/tmp/emacs_autosaves/" (user-login-name) "/"))
 
+(defun single-window-mode ()
+  (interactive)
+  (delete-other-windows)
+  (set-frame-size (selected-frame) 80 65))
+
+(defun double-window-mode ()
+  (interactive)
+  (delete-other-windows)
+  (set-frame-size (selected-frame) 163 65)
+  (split-window (selected-window) 83 t))
+
 (make-directory autosave-dir t)
 (if window-system
   ;; Window system present

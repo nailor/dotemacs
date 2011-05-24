@@ -4,10 +4,6 @@
 (setq tab-width 4)
 ;; (load "color-theme.el")
 ;; (load "python-mode/python-mode.el")
-(mapcar
- (lambda (file) (load file))
- (directory-files "~/.emacs-lib/init.d" t "^.*\\.el$"))
-
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -15,13 +11,14 @@
   ;; If there is more than one, they won't work right.
  '(case-fold-search t)
  '(color-theme-legal-frame-parameters "\\(color\\|mode\\|font\\|height\\|width\\)$")
- '(css-indent-offset 2)
+ '(css-indent-offset 4)
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(display-time-24hr-format t)
  '(display-time-day-and-date t)
  '(display-time-mode t)
  '(find-grep-options "-q")
+ '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup) ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup) ("\\.tex\\'" flymake-simple-tex-init) ("\\.idl\\'" flymake-simple-make-init))))
  '(global-font-lock-mode t nil (font-lock))
  '(grep-command "grep -n -r ")
  '(gud-gdb-command-name "gdb --annotate=1")
@@ -45,7 +42,9 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "apple" :family "Monaco"))))
  '(cursor ((t (:background "#eeeeee"))))
+ '(flymake-errline ((((class color) (background dark)) (:underline "Firebrick4"))))
  '(git-header-face ((t (:foreground "lightblue"))))
  '(git-status-face ((t (:foreground "purple")))))
 (require 'git)
@@ -60,3 +59,8 @@
 (setq inhibit-splash-screen t)
 (toggle-scroll-bar -1)
 (menu-bar-mode -1)
+
+(mapcar
+ (lambda (file) (load file))
+ (directory-files "~/.emacs-lib/init.d" t "^.*\\.el$"))
+
