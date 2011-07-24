@@ -71,7 +71,8 @@ HYPERLINK HIGHLIGHT)"
               (list
                scss-sass-command
                buffer-file-name
-               (first (split-string buffer-file-name ".scss")) ".css")
+               (concat
+                (first (split-string buffer-file-name ".scss")) ".css"))
               " ")))
 
 ;;;###autoload
