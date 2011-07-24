@@ -66,9 +66,13 @@ HYPERLINK HIGHLIGHT)"
 (defun scss-compile()
   "Compiles the current buffer, sass filename.scss filename.css"
   (interactive)
-    (compile (concat scss-sass-command " "
-          buffer-file-name " "
-          (first (split-string buffer-file-name ".scss")) ".css")))
+  (shell-command
+   (mapconcat 'shell-quote-argument
+              (list
+               scss-sass-command
+               buffer-file-name
+               (first (split-string buffer-file-name ".scss")) ".css")
+              " ")))
 
 ;;;###autoload
 (define-derived-mode scss-mode css-mode "Scss"
