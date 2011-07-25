@@ -16,3 +16,6 @@
 [submodule "rainbow"]
 	path = rainbow
 	url = git://git.naquadah.org/rainbow.git
+[submodule "haml-mode"]
+	path = haml-mode
+	url = https://github.com/knu/haml-mode.git
