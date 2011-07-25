@@ -26,3 +26,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(require 'find-file-in-project)
+(global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
+

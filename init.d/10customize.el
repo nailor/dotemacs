@@ -1,4 +1,8 @@
-(setq backup-directory-alist '(("." . "~/.emacs-backups"))) ; stop leaving backup~ turds scattered everywhere
+(setq temporary-file-directory "~/.emacs-backup")
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 (global-unset-key (kbd "C-z"))
 ;; (global-unset-key (kbd "<up>"))
 ;; (global-unset-key (kbd "<down>"))
