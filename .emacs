@@ -26,6 +26,7 @@
  '(js2-basic-offset 4)
  '(js2-mirror-mode nil)
  '(large-file-warning-threshold nil)
+ '(python-indent-offset 4)
  '(rst-mode-lazy nil)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
