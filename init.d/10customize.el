@@ -4,6 +4,7 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (global-unset-key (kbd "C-z"))
+(setq confirm-kill-emacs 'y-or-n-p)
 ;; (global-unset-key (kbd "<up>"))
 ;; (global-unset-key (kbd "<down>"))
 ;; (global-unset-key (kbd "<next>"))
