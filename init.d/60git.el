@@ -5,4 +5,4 @@
 ;(autoload 'git-blame-mode "git-blame"
 ;                          "Minor mode for incremental blame for Git." t)
 ;(global-set-key "\M-s" 'git-status)
-;(require 'gist)
+(require 'gist)
