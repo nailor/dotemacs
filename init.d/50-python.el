@@ -1,6 +1,13 @@
-;; -*- emacs-lisp -*-
-(defun flymake-create-temp-in-system-tempdir (filename prefix)
-  (make-temp-file (or prefix "flymake")))
+(require 'python)
+(add-hook 'python-mode-hook
+  #'(lambda ()
+      (define-key python-mode-map "\C-m" 'newline-and-indent)
+      (define-key python-mode-map (kbd "C-c C-;") 'python-indent-shift-left)
+      (define-key python-mode-map (kbd "C-c C-:") 'python-indent-shift-right)
+      (define-key python-mode-map (kbd "C-c C-c") 'comment-region)
+      (define-key python-mode-map (kbd "C-c C-u") 'uncomment-region)
+      (define-key python-mode-map (kbd "C-c C-n") 'flymake-goto-next-error)
+      (define-key python-mode-map (kbd "C-c C-p") 'flymake-goto-prev-error)))
 
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
@@ -11,14 +18,11 @@
              (local-file (file-relative-name
                           temp-file
                           (file-name-directory buffer-file-name))))
-        (list "/Users/jyrki/.emacs-lib/pychecker.sh" (list local-file)))))
+        (list "~/.emacs-config/pychecker.sh" (list local-file)))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
-
-(define-key python-mode-map (kbd "C-c C-n") 'flymake-goto-next-error)
-(define-key python-mode-map (kbd "C-c C-p") 'flymake-goto-prev-error)
 
 ;; Following code's license: Gnu Public License
 ;;
