@@ -41,4 +41,4 @@
   (progn
     ;; Disable suspending with C-z and iconifying with C-x C-z
     (global-unset-key (kbd "C-z"))
-    (global-unset-key (kbd "C-x C-z")))
+    (global-unset-key (kbd "C-x C-z"))))

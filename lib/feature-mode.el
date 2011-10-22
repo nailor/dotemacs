@@ -1,1 +1,1 @@
-cucumber.el/feature-mode.el
+cucumber/feature-mode.el
