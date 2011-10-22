@@ -1,21 +1,18 @@
-[submodule "python-mode"]
-	path = python-mode
+[submodule "lib/python-mode"]
+	path = lib/python-mode
 	url = https://github.com/fgallina/python.el.git
-[submodule "gist"]
-	path = gist
+[submodule "lib/gist.el"]
+	path = lib/gist.el
 	url = git://github.com/defunkt/gist.el
-[submodule "cucumber.el"]
-	path = cucumber.el
-	url = https://github.com/michaelklishin/cucumber.el
-[submodule "git-commit-mode"]
-	path = git-commit-mode
+[submodule "lib/git-commit-mode"]
+	path = lib/git-commit-mode
 	url = https://github.com/rafl/git-commit-mode.git
-[submodule "markdown-mode"]
-	path = markdown-mode
+[submodule "lib/cucumber"]
+	path = lib/cucumber
+	url = https://github.com/michaelklishin/cucumber.el
+[submodule "lib/markdown-mode"]
+	path = lib/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "rainbow"]
-	path = rainbow
-	url = git://git.naquadah.org/rainbow.git
-[submodule "haml-mode"]
-	path = haml-mode
+[submodule "lib/haml-mode"]
+	path = lib/haml-mode
 	url = https://github.com/knu/haml-mode.git
