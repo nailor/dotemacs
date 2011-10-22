@@ -2,7 +2,7 @@
 	path = lib/python-mode
 	url = https://github.com/fgallina/python.el.git
 [submodule "lib/gist.el"]
-	path = lib/gist.el
+	path = lib/gist
 	url = git://github.com/defunkt/gist.el
 [submodule "lib/git-commit-mode"]
 	path = lib/git-commit-mode
