@@ -6,14 +6,16 @@
                         :background "black"
                         :foreground "white")
     (set-face-attribute 'mode-line nil
-                        :background "gray30"
-                        :foreground "gray80"
+                        :background "#f8f8f8"
+                        :foreground "#212121"
                         :box nil)
     (set-face-attribute 'mode-line-inactive nil
                         :background "gray30"
                         :foreground "gray50"
                         :box nil)
-   (set-face-attribute 'cursor nil
+    (global-hl-line-mode t) ;; Hilight current line
+    (set-face-background 'hl-line "#212121")
+    (set-face-attribute 'cursor nil
                         :background "white"
                         :foreground "black"))
 
