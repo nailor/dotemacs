@@ -25,3 +25,5 @@
 
 ;; blinky blinky
 (blink-cursor-mode t)
+
+(show-paren-mode t)

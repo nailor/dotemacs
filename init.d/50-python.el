@@ -18,7 +18,7 @@
              (local-file (file-relative-name
                           temp-file
                           (file-name-directory buffer-file-name))))
-        (list "~/.emacs-config/pychecker.sh" (list local-file)))))
+        (list "~/.emacs-config/bin/pychecker.sh" (list local-file)))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 
@@ -32,6 +32,9 @@
 ;; keyboard user's annoyance
 
 ;;flymake-ler(file line type text &optional full-file)
+(defun flymake-create-temp-in-system-tempdir (filename prefix)
+  (make-temp-file (or prefix "flymake")))
+
 (defun show-fly-err-at-point ()
   "If the cursor is sitting on a flymake error, display the
 message in the minibuffer"

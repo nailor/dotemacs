@@ -21,6 +21,8 @@
 
 (global-set-key (kbd "C-c w") 'delete-trailing-whitespace)
 
+(global-set-key (kbd "C-<tab>") 'other-window)
+
 ; Unset harmful keys
 (global-unset-key (kbd "M-DEL"))
 ;(global-unset-key (kbd "<up>"))
