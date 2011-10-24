@@ -26,4 +26,7 @@
 ;; blinky blinky
 (blink-cursor-mode t)
 
+;; No yes-or-no, y-or-n instead
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (show-paren-mode t)
