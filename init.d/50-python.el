@@ -10,6 +10,7 @@
       (define-key python-mode-map (kbd "C-c C-p") 'flymake-goto-prev-error)))
 
 (when (load "flymake" t)
+  (require 'tramp-cmds)
   (defun flymake-pyflakes-init ()
     ; Make sure it's not a remote buffer or flymake would not work
     (when (not (subsetp (list (current-buffer)) (tramp-list-remote-buffers)))
