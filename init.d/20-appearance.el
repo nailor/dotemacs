@@ -13,8 +13,6 @@
                         :background "gray30"
                         :foreground "gray50"
                         :box nil)
-    (global-hl-line-mode t) ;; Hilight current line
-    (set-face-background 'hl-line "#212121")
     (set-face-attribute 'cursor nil
                         :background "white"
                         :foreground "black"))
