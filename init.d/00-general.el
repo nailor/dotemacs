@@ -30,3 +30,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (show-paren-mode t)
+
+;; Smarter buffer names
+(require 'uniquify)
+(setq uniquify-buffer-name-style (quote post-forward))
