@@ -8,7 +8,6 @@
 (setq ido-enable-flex-matching t) ; fuzzy matching is a must have
 (setq ido-show-dot-for-dired nil)
 (setq ido-auto-merge-delay-time 1.50)
-(define-key ido-file-completion-map (kbd "C-w") 'backward-kill-word)
 
 (require 'smex)
 (smex-initialize)

@@ -2,8 +2,6 @@
 ;; http://steve.yegge.googlepages.com/effective-emacs
 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\M-r" 'isearch-backward-regexp)
 (global-set-key "\M-s" 'isearch-forward-regexp)
 (global-set-key [f5] 'call-last-kbd-macro)
@@ -24,7 +22,6 @@
 (global-set-key (kbd "C-<tab>") 'other-window)
 
 ; Unset harmful keys
-(global-unset-key (kbd "M-DEL"))
 ;(global-unset-key (kbd "<up>"))
 ;(global-unset-key (kbd "<down>"))
 ;(global-unset-key (kbd "<left>"))
