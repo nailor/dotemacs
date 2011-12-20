@@ -21,6 +21,8 @@
 
 (global-set-key (kbd "C-<tab>") 'other-window)
 
+(define-key global-map "\C-cr" 'org-remember)
+
 ; Unset harmful keys
 ;(global-unset-key (kbd "<up>"))
 ;(global-unset-key (kbd "<down>"))

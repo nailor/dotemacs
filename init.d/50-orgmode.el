@@ -1,3 +1,5 @@
+(org-remember-insinuate)
+
 ;; The following lines are always needed.  Choose your own keys.
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
@@ -22,3 +24,9 @@
 
 ;; do it once at startup
 (th-org-update-agenda-file t)
+
+;; Do prettier indexing
+(setq org-startup-indented t)
+
+;; Log DONE events
+(setq org-log-done t)

@@ -19,7 +19,8 @@
              (local-file (file-relative-name
                           temp-file
                           (file-name-directory buffer-file-name))))
-        (list "~/.emacs-config/bin/pychecker.sh" (list local-file)))))
+        (list "~/.emacs-config/bin/pychecker.sh"
+              (list (expand-file-name virtualenv-dir) local-file)))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 
