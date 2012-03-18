@@ -63,9 +63,9 @@
 
 (defun my-js2-mode-hook ()
   (require 'espresso)
-  (setq espresso-indent-level 4
+  (setq espresso-indent-level javascript-indent
         indent-tabs-mode nil
-        c-basic-offset 4)
+        c-basic-offset javascript-indent)
   (c-toggle-auto-state 0)
   (c-toggle-hungry-state 1)
   (set (make-local-variable 'indent-line-function) 'my-js2-indent-function)
