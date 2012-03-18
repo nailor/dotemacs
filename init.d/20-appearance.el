@@ -2,7 +2,8 @@
   ;; Window system present
   (progn
     (set-face-attribute 'default nil
-                        :font "ProggyClean"
+                        :font "ProggyCleanTT"
+                        :height 120
                         :background "black"
                         :foreground "white")
     (set-face-attribute 'mode-line nil
