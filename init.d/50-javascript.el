@@ -17,11 +17,6 @@
 
       (save-excursion
 
-        ;; I like to indent case and labels to half of the tab width
-        (back-to-indentation)
-        (if (looking-at "case\\s-")
-            (setq indentation (+ indentation (/ espresso-indent-level 2))))
-
         ;; consecutive declarations in a var statement are nice if
         ;; properly aligned, i.e:
         ;;
