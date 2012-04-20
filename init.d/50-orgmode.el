@@ -20,7 +20,7 @@
     (save-window-excursion
       (let ((file "/tmp/org-agenda.txt"))
         (org-agenda-list)
-        (org-write-agenda file)))))
+        (org-agenda-write file)))))
 
 ;; do it once at startup
 (th-org-update-agenda-file t)
