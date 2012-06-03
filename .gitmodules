@@ -16,3 +16,6 @@
 [submodule "lib/haml-mode"]
 	path = lib/haml-mode
 	url = https://github.com/knu/haml-mode.git
+[submodule "lib/puppet-syntax-emacs"]
+	path = lib/puppet-syntax-emacs
+	url = https://github.com/puppetlabs/puppet-syntax-emacs.git
