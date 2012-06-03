@@ -1,0 +1,17 @@
+#!/bin/sh
+
+pwd_to_root () {
+    test / = "$PWD" && return || \
+        test -e ".git" -o -e "setup.py" && return || \
+        cd .. && pwd_to_root
+}
+
+pwd_to_root
+
+project=`basename $PWD`
+
+if [ -e /home/jyrki/.virtualenvs/$project/bin/nosetests ]; then
+    exec /home/jyrki/.virtualenvs/$project/bin/nosetests $@
+fi
+
+exit 2
