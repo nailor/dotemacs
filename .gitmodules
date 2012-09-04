@@ -22,3 +22,6 @@
 [submodule "lib/yasnippet"]
 	path = lib/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
+[submodule "themes/tomorrow"]
+	path = themes/tomorrow
+	url = https://github.com/chriskempson/tomorrow-theme

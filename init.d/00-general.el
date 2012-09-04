@@ -1,5 +1,6 @@
 ;; All libraries
 (add-to-list 'load-path "~/.emacs-config/lib/")
+(add-to-list 'custom-theme-load-path "~/.emacs-config/themes/")
 
 ;; Preferences
 (setq inhibit-startup-message 1)
