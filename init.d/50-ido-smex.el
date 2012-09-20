@@ -18,3 +18,6 @@
 
 (require 'find-file-in-project)
 (global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
+
+(autoload 'idomenu "idomenu" nil t)
+(global-set-key (kbd "M-i") 'idomenu)
