@@ -20,7 +20,7 @@
 
 ;; Disable abbrev-mode
 (setq-default abbrev-mode nil)
-
+(subword-mode)
 ;; By default, disable flymake for all files
 (setq flymake-allowed-file-name-masks '())
 
@@ -31,6 +31,11 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (show-paren-mode t)
+
+;; Don't ask about symlinked version controlled files
+(setq vc-follow-symlinks t)
+
+(setq next-line-add-newlines nil)
 
 ;; Smarter buffer names
 (require 'uniquify)
