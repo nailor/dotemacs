@@ -30,7 +30,10 @@
       (local-set-key "\C-c." 'nosetests-one)
       (local-set-key "\C-cpa" 'nosetests-pdb-all)
       (local-set-key "\C-cpm" 'nosetests-pdb-module)
-      (local-set-key "\C-cp." 'nosetests-pdb-one)))
+      (local-set-key "\C-cp." 'nosetests-pdb-one)
+      (which-function-mode)
+      (subword-mode)
+      ))
 
 (when (load "flymake" t)
   (require 'tramp-cmds)
