@@ -1,5 +1,8 @@
 (load "flymake")
 
+;; Nope, I want my copies in the system temp dir.
+(setq flymake-run-in-place nil)
+
 ;; By default, disable flymake for all files
 (setq flymake-allowed-file-name-masks '())
 
@@ -52,18 +55,13 @@ it)"
 
 ;; Python
 (defun flymake-pyflakes-init ()
-  (when (if (boundp 'tramp-list-remote-buffers)
-            (not (subsetp
-                  (list (current-buffer))
-                  (tramp-list-remote-buffers)))
-          t)
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list "~/.emacs-config/bin/pychecker.sh"
-            (list (expand-file-name virtualenv-dir) local-file)))))
+  (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                     'flymake-create-temp-inplace))
+         (local-file (file-relative-name
+                      temp-file
+                      (file-name-directory buffer-file-name))))
+    (list "~/.emacs-config/bin/pychecker.sh"
+          (list (expand-file-name virtualenv-dir) local-file))))
 
 (add-to-list 'flymake-allowed-file-name-masks
              '("\\.py\\'" flymake-pyflakes-init))
@@ -72,5 +70,6 @@ it)"
 (defun force-flymake ()
   (interactive)
   (add-to-list 'flymake-allowed-file-name-masks
-               (cons (buffer-name) flymake-pyflakes-init))
+               (cons (format "^%s$" (buffer-file-name))
+                     '(flymake-pyflakes-init)))
   (flymake-mode t))
