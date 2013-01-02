@@ -37,6 +37,9 @@
 
 (setq next-line-add-newlines nil)
 
+;; Disable annoying vc mode
+(setq vc-handled-backends nil)
+
 ;; Smarter buffer names
 (require 'uniquify)
 (setq uniquify-buffer-name-style (quote post-forward))
