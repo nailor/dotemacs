@@ -34,3 +34,15 @@
 [submodule "lib/flymake"]
 	path = lib/flymake
 	url = https://github.com/illusori/emacs-flymake
+[submodule "lib/emacs-epc"]
+	path = lib/emacs-epc
+	url = https://github.com/kiwanami/emacs-epc
+[submodule "lib/auto-complete"]
+	path = lib/auto-complete
+	url = https://github.com/auto-complete/auto-complete
+[submodule "lib/jedi-el"]
+	path = lib/jedi-el
+	url = https://github.com/tkf/emacs-jedi
+[submodule "lib/emacs-ctable"]
+	path = lib/emacs-ctable
+	url = https://github.com/kiwanami/emacs-ctable
