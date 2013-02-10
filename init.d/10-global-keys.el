@@ -19,8 +19,6 @@
 
 (global-set-key (kbd "C-c w") 'delete-trailing-whitespace)
 
-(global-set-key (kbd "C-<tab>") 'other-window)
-
 (define-key global-map "\C-cr" 'org-remember)
 
 ; Unset harmful keys
