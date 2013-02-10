@@ -1,11 +1,19 @@
 (if window-system
-  ;; Window system present
   (progn
+    ;; Window system present
     (set-face-attribute 'default nil
                         :font "ProggyCleanTT"
                         :height 120
                         :background "black"
                         :foreground "white")
+    (if (featurep 'ns-win)
+      ; check if we're on OSX
+      (set-face-attribute 'default nil
+                          :height 160)
+      (set-face-attribute 'default nil
+                          :height 120)
+      )
+
     (set-face-attribute 'mode-line nil
                         :background "#f8f8f8"
                         :foreground "#212121"
@@ -17,9 +25,8 @@
     (set-face-attribute 'cursor nil
                         :background "white"
                         :foreground "black"))
-
-  ;; Running in console
   (progn
+    ;; Running in console
     (set-face-attribute 'default nil
                         :background "black"
                         :foreground "white")
