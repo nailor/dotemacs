@@ -1,11 +1,11 @@
 ;;; auto-complete.el --- Auto Completion for GNU Emacs
 
-;; Copyright (C) 2008, 2009, 2010, 2011, 2012  Tomohiro Matsuyama
+;; Copyright (C) 2008, 2009, 2010, 2011, 2012, 2013  Tomohiro Matsuyama
 
 ;; Author: Tomohiro Matsuyama <m2ym.pub@gmail.com>
 ;; URL: http://cx4a.org/software/auto-complete
 ;; Keywords: completion, convenience
-;; Version: 1.4
+;; Version: 1.4.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -42,6 +42,8 @@
 ;;; Code:
 
 
+
+(defconst ac-version "1.4.0")
 
 (eval-when-compile
   (require 'cl))
@@ -766,20 +768,19 @@ You can not use it in source definition like (prefix . `NAME')."
         if (ac-source-available-p source)
         do
         (setq source (ac-source-entity source))
-        (flet ((add-attribute (name value &optional append) (add-to-list 'source (cons name value) append)))
-          ;; prefix
-          (let* ((prefix (assoc 'prefix source))
-                 (real (assoc-default (cdr prefix) ac-prefix-definitions)))
-            (cond
-             (real
-              (add-attribute 'prefix real))
-             ((null prefix)
-              (add-attribute 'prefix 'ac-prefix-default))))
-          ;; match
-          (let ((match (assq 'match source)))
-            (cond
-             ((eq (cdr match) 'substring)
-              (setcdr match 'ac-match-substring)))))
+        ;; prefix
+        (let* ((prefix (assoc 'prefix source))
+               (real (assoc-default (cdr prefix) ac-prefix-definitions)))
+          (cond
+           (real
+            (add-to-list 'source (cons 'prefix real)))
+           ((null prefix)
+            (add-to-list 'source (cons 'prefix 'ac-prefix-default)))))
+        ;; match
+        (let ((match (assq 'match source)))
+          (cond
+           ((eq (cdr match) 'substring)
+            (setcdr match 'ac-match-substring))))
         and collect source))
 
 (defun ac-compiled-sources ()
@@ -1442,8 +1443,9 @@ that have been made before in this function.  When `buffer-undo-list' is
   "Select next candidate."
   (interactive)
   (when (ac-menu-live-p)
+    (when (popup-hidden-p ac-menu)
+      (ac-show-menu))
     (popup-next ac-menu)
-    (setq ac-show-menu t)
     (if (eq this-command 'ac-next)
         (setq ac-dwim-enable t))))
 
@@ -1451,8 +1453,9 @@ that have been made before in this function.  When `buffer-undo-list' is
   "Select previous candidate."
   (interactive)
   (when (ac-menu-live-p)
+    (when (popup-hidden-p ac-menu)
+      (ac-show-menu))
     (popup-previous ac-menu)
-    (setq ac-show-menu t)
     (if (eq this-command 'ac-previous)
         (setq ac-dwim-enable t))))
 
