@@ -49,3 +49,6 @@
 [submodule "lib/emacs-deferred"]
 	path = lib/emacs-deferred
 	url = https://github.com/kiwanami/emacs-deferred
+[submodule "lib/deft"]
+	path = lib/deft
+	url = git://jblevins.org/git/deft.git

@@ -1,3 +1,4 @@
+(require 'org-remember)
 (org-remember-insinuate)
 
 ;; The following lines are always needed.  Choose your own keys.
