@@ -35,3 +35,9 @@
                         :foreground "black"
                         :inverse-video nil
                         :box nil)))
+
+;; Display full filename in the frame title
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
