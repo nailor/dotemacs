@@ -43,3 +43,5 @@
 ;; Smarter buffer names
 (require 'uniquify)
 (setq uniquify-buffer-name-style (quote post-forward))
+
+(electric-pair-mode t)
