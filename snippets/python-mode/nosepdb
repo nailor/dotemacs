@@ -1,0 +1,5 @@
+# name: nosepdb
+# key: nosepdb
+# --
+from nose.tools import set_trace; set_trace()
+$0
