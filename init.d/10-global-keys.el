@@ -10,7 +10,6 @@
 (global-set-key "\M-p" 'backward-paragraph)
 (global-set-key "\C-\M-n" #'(lambda () (interactive) (forward-line 12)))
 (global-set-key "\C-\M-p" #'(lambda () (interactive) (previous-line 12)))
-(global-set-key "\M-g" 'goto-line)
 
 (global-set-key (kbd "M--") 'hippie-expand)
 
