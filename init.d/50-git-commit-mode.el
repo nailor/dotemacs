@@ -1,1 +1,1 @@
-(require 'git-commit)
+(require 'git-commit-mode)
