@@ -1,3 +1,6 @@
+(blink-cursor-mode 0)
+(setq cursor-in-non-selected-windows nil)
+
 (if window-system
   (progn
     ;; Window system present
