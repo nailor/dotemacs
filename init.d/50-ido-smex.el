@@ -1,11 +1,18 @@
 (require 'ido)
 (require 'smex)
+(require 'projectile)
+(require 'flx-ido)
+(projectile-global-mode)
+
 
 (setq ido-create-new-buffer 'always)
 (setq ido-default-buffer-method 'selected-window)
 (setq ido-use-filename-at-point nil)
 (ido-mode t)
 (ido-everywhere t)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
 
 (setq ido-enable-flex-matching t) ; fuzzy matching is a must have
 (setq ido-show-dot-for-dired nil)

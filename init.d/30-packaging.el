@@ -19,6 +19,7 @@
                         deft
                         fill-column-indicator
                         flycheck
+                        flx-ido
                         gist
                         git-commit-mode
                         git-gutter
@@ -31,6 +32,7 @@
                         js2-mode
                         json-mode
                         markdown-mode
+                        projectile
                         puppet-mode
                         smex
                         yasnippet
