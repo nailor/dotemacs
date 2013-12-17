@@ -1,3 +1,4 @@
+;; (require 'helm-config)
 (require 'ido)
 (require 'smex)
 (require 'projectile)
@@ -50,3 +51,4 @@
       (find-file file))))
 
 (global-set-key (kbd "C-x C-r") 'recentf-ido-find-file)
+
