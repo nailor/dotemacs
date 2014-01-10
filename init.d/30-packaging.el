@@ -17,6 +17,7 @@
                         auto-complete
                         coffee-mode
                         deft
+                        exec-path-from-shell
                         fill-column-indicator
                         flycheck
                         flx-ido
