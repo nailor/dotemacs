@@ -34,6 +34,10 @@
 (global-set-key (kbd "M-;") 'beginning-of-buffer)
 (global-set-key (kbd "M-:") 'end-of-buffer)
 
+(add-hook 'electric-indent-mode-hook
+          #'(lambda ()
+              (local-set-key "\C-j" 'newline-and-indent)))
+
 (if window-system
   ;; Window system present
   (progn
