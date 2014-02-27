@@ -15,7 +15,7 @@
 (and (functionp 'tool-bar-mode) (tool-bar-mode -1))
 (and (functionp 'scroll-bar-mode) (scroll-bar-mode -1))
 (menu-bar-mode -1)
-(transient-mark-mode 1)
+(transient-mark-mode nil)
 (mouse-avoidance-mode 'jump)
 
 ;; Disable abbrev-mode
