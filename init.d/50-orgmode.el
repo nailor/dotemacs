@@ -26,5 +26,7 @@
 ;; Do prettier indexing
 (setq org-startup-indented t)
 
+(setq org-default-notes-file (concat org-directory "notes.org"))
+
 ;; Log DONE events
 (setq org-log-done t)
