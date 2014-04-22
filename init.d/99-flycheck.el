@@ -2,8 +2,8 @@
 
 (require 'flycheck)
 
-;; Only have flycheck bitching in left-fringe
-(setq flycheck-highlighting-mode 'nil)
+;; Have flycheck bitch all the lines
+(setq flycheck-highlighting-mode 'lines)
 
 ;; Use grizzl instead of ido for completion
 (setq flycheck-completion-system 'grizzl)
