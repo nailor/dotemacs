@@ -21,8 +21,6 @@
 ;; Disable abbrev-mode
 (setq-default abbrev-mode nil)
 (subword-mode)
-;; By default, disable flymake for all files
-(setq flymake-allowed-file-name-masks '())
 
 ;; blinky blinky
 (blink-cursor-mode t)
