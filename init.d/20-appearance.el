@@ -5,16 +5,11 @@
   (progn
     ;; Window system present
     (set-face-attribute 'default nil
-                        :font "ProggyCleanTT"
+                        :font "Anonymous Pro"
                         :height 120)
-    (if (featurep 'ns-win)
-      ; check if we're on OSX
-      (set-face-attribute 'default nil
-                          :height 160)
-      (set-face-attribute 'default nil
-                          :height 120)
-      )))
-  
+    (set-frame-font (font-spec :antialias nil :size 12))))
+
+
 ;; Display full filename in the frame title
 (setq frame-title-format
       '((:eval (if (buffer-file-name)

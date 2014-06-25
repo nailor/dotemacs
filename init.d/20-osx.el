@@ -4,4 +4,4 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil)
   (setq ring-bell-function (lambda ()))
-  (setq mac-allow-anti-aliasing nil))  ;; turn off anti-aliasing
+  (setq mac-allow-anti-aliasing 1))  ;; turn off anti-aliasing
