@@ -22,8 +22,10 @@
                         flycheck
                         flx-ido
                         gist
+                        gitignore-mode
                         git-commit-mode
                         git-gutter
+                        git-rebase-mode
                         graphviz-dot-mode
                         grizzl
                         haml-mode
@@ -36,6 +38,7 @@
                         projectile
                         puppet-mode
                         smex
+                        yaml-mode
                         yasnippet
                         ))
 
