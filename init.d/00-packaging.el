@@ -17,18 +17,20 @@
                         auto-complete
                         coffee-mode
                         deft
+                        easy-kill
                         exec-path-from-shell
                         fill-column-indicator
-                        flycheck
                         flx-ido
+                        flycheck
                         gist
-                        gitignore-mode
                         git-commit-mode
                         git-gutter
                         git-rebase-mode
+                        gitignore-mode
                         graphviz-dot-mode
                         grizzl
                         haml-mode
+                        highlight-symbol
                         idomenu
                         iedit
                         jedi
