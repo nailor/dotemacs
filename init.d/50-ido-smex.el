@@ -1,9 +1,7 @@
 ;; (require 'helm-config)
 (require 'ido)
 (require 'smex)
-(require 'projectile)
 (require 'flx-ido)
-(projectile-global-mode)
 
 
 (setq ido-create-new-buffer 'always)
