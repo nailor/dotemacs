@@ -3,6 +3,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs-config/themes/")
 
 ;; Preferences
+(setq inhibit-startup-screen t)
 (setq inhibit-startup-message 1)
 (setq make-backup-files nil)
 (setq confirm-kill-emacs 'y-or-n-p)
@@ -49,3 +50,9 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
+
+;; Set arbitrary but high tresholds for splitting. I don't want emacs
+;; to decide for me when to split
+(setq split-height-threshold 1200)
+(setq split-width-threshold 2000)
