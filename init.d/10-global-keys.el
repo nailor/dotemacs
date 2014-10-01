@@ -30,6 +30,9 @@
 (global-unset-key (kbd "C-<left>"))
 (global-unset-key (kbd "C-<right>"))
 
+;; Use more sane smerge command prefix
+(setq smerge-command-prefix (kbd "C-c s"))
+
 ; Imitate US keyboard layout
 (global-set-key (kbd "M-;") 'beginning-of-buffer)
 (global-set-key (kbd "M-:") 'end-of-buffer)
