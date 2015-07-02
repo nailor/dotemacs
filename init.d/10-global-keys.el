@@ -6,8 +6,8 @@
 (global-set-key "\M-s" 'isearch-forward-regexp)
 (global-set-key [f5] 'call-last-kbd-macro)
 
-(global-set-key "\M-n" 'forward-paragraph)
-(global-set-key "\M-p" 'backward-paragraph)
+(global-set-key "\M-N" 'forward-paragraph)
+(global-set-key "\M-P" 'backward-paragraph)
 (global-set-key "\C-\M-n" #'(lambda () (interactive) (forward-line 12)))
 (global-set-key "\C-\M-p" #'(lambda () (interactive) (previous-line 12)))
 
