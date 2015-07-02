@@ -17,6 +17,7 @@
                         auto-complete
                         coffee-mode
                         deft
+                        diminish
                         exec-path-from-shell
                         fill-column-indicator
                         flx-ido
