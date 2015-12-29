@@ -5,9 +5,8 @@
   (progn
     ;; Window system present
     (set-face-attribute 'default nil
-                        :font "Anonymous Pro"
-                        :height 120)
-    (set-frame-font (font-spec :antialias nil :size 12))))
+                        :font "Hack"
+                        :height 120)))
 
 
 ;; Display full filename in the frame title
