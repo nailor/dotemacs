@@ -40,6 +40,7 @@
                         projectile
                         puppet-mode
                         smex
+                        use-package
                         yaml-mode
                         yasnippet
                         ))
@@ -47,3 +48,8 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)                ;; if you use :diminish
+(require 'bind-key)                ;; if you use any :bind variant
