@@ -20,4 +20,3 @@
 (add-hook 'flycheck-mode-hook
           #'(lambda ()
               (setq flycheck-flake8-maximum-line-length 120)))
-
