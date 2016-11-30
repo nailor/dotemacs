@@ -23,7 +23,7 @@
                         flx-ido
                         flycheck
                         gist
-                        git-commit-mode
+                        git-commit
                         git-gutter
                         git-rebase-mode
                         gitignore-mode
