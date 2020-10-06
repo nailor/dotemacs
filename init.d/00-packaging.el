@@ -23,7 +23,6 @@
                         flx-ido
                         flycheck
                         gist
-                        git-commit
                         git-gutter
                         git-rebase-mode
                         gitignore-mode
@@ -36,6 +35,7 @@
                         jedi
                         js2-mode
                         json-mode
+                        magit
                         markdown-mode
                         projectile
                         puppet-mode

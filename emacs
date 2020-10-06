@@ -1,9 +1,9 @@
-;; Link this file to ~/.emacs
+;; link this file to ~/.emacs
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
+;; added by package.el.  this must come before configurations of
+;; installed packages.  don't delete this line.  if you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; you may delete these explanatory comments.
 (package-initialize)
 
 (custom-set-variables
@@ -14,10 +14,10 @@
  '(custom-safe-themes
    (quote
     ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(flycheck-python-flake8-executable "/Users/jyrki/.virtualenvs/emacs/bin/flake8")
+ '(flycheck-python-flake8-executable "/users/jyrki/.virtualenvs/emacs/bin/flake8")
  '(package-selected-packages
    (quote
-    (yasnippet yaml-mode web-mode volatile-highlights vcl-mode use-package solarized-theme smex smartparens smart-mode-line python-mode py-yapf puppet-mode protobuf-mode php-mode persp-projectile multiple-cursors mo-git-blame markdown-mode less-css-mode json-mode js2-mode jedi iedit idomenu highlight-symbol helm-projectile helm-ag handlebars-mode haml-mode groovy-mode grizzl graphviz-dot-mode gitignore-mode git-rebase-mode git-gutter git-commit-training-wheels-mode gist flycheck flx-ido fill-column-indicator f expand-region exec-path-from-shell emacs-eclim easy-kill dockerfile-mode deft debian-changelog-mode crontab-mode company-tern coffee-mode clojure-mode arduino-mode ag ace-window))))
+    (magit yasnippet yaml-mode web-mode volatile-highlights vcl-mode use-package solarized-theme smex smartparens smart-mode-line python-mode py-yapf puppet-mode protobuf-mode php-mode persp-projectile multiple-cursors mo-git-blame markdown-mode less-css-mode json-mode js2-mode jedi iedit idomenu highlight-symbol helm-projectile helm-ag handlebars-mode haml-mode groovy-mode grizzl graphviz-dot-mode gitignore-mode git-rebase-mode git-gutter git-commit-training-wheels-mode gist flycheck flx-ido fill-column-indicator f expand-region exec-path-from-shell emacs-eclim easy-kill dockerfile-mode deft debian-changelog-mode crontab-mode company-tern coffee-mode clojure-mode arduino-mode ag ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -45,4 +45,4 @@
   (load (file-name-sans-extension file)))
 
 ;; Clear echo area
-(princ "" t)
+;; (princ "" t)
