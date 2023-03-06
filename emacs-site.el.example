@@ -1,4 +1,4 @@
 ;; Copy this file to ~/.emacs-site.el and customize
 
-(setq virtualenv-dir "~/path-to-virtualenv")
-(setq user-mail-address "user@example.com")
+(setq virtualenv-dir "~/.emacs-config/jedi")
+(setq user-mail-address "jyrki.pulliainenzalando.fi")

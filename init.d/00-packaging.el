@@ -24,8 +24,6 @@
                         flycheck
                         gist
                         git-gutter
-                        git-rebase-mode
-                        gitignore-mode
                         graphviz-dot-mode
                         grizzl
                         haml-mode
@@ -39,6 +37,7 @@
                         markdown-mode
                         projectile
                         puppet-mode
+			smartparens
                         smex
                         use-package
                         yaml-mode
